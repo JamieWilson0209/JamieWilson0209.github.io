@@ -263,6 +263,13 @@
             gap: 2rem;
         }
 
+        /* Responsive grid adjustment to show 2 cards side-by-side on desktop */
+        @media (min-width: 769px) {
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         .project-card {
             background: var(--bg-panel);
             border: 1px solid var(--grey-dim);
@@ -450,7 +457,6 @@
 </head>
 <body>
 
-    <!-- ─── Hero ─── -->
     <header class="header">
         <div class="header-content">
             <p class="header-label">Computational Neuroscience · Data Analysis</p>
@@ -471,7 +477,6 @@
         </div>
     </header>
 
-    <!-- ─── Nav ─── -->
     <nav>
         <div class="nav-inner">
             <a href="#" class="nav-name">JW</a>
@@ -483,7 +488,6 @@
         </div>
     </nav>
 
-    <!-- ─── Projects ─── -->
     <section id="projects">
         <p class="section-label fade-in">Portfolio</p>
         <h2 class="fade-in">Projects</h2>
@@ -516,27 +520,12 @@
                 </div>
             </a>
 
-        </div>
-    </section>
-
-    <div class="divider"><hr></div>
-
-    <section id="projects">
-        <p class="section-label fade-in">Portfolio</p>
-        <h2 class="fade-in">Projects</h2>
-        <p class="section-intro fade-in">
-            Computational analysis, visualisation, and statistical methods
-            applied to real neuroscience data.
-        </p>
-
-        <div class="projects">
-
             <a href="https://github.com/JamieWilson0209/OrCaNN/" class="project-card fade-in" target="_blank">
                 <div class="card-content">
                     <p class="card-tag">Calcium Imaging</p>
                     <h3 class="card-title">OrCaNN</h3>
                     <p class="card-desc">
-                        The natural evolution of calcium-pipeline to a convolution neural network. Pending spatial training
+                        The natural evolution of calcium-pipeline to a convolutional neural network. Pending spatial training.
                     </p>
                     <div class="card-tech">
                         <span>Python</span>
@@ -556,7 +545,6 @@
 
     <div class="divider"><hr></div>
 
-    <!-- ─── About ─── -->
     <section id="about">
         <p class="section-label fade-in">Background</p>
         <h2 class="fade-in">About</h2>
@@ -604,7 +592,6 @@
 
     <div class="divider"><hr></div>
 
-    <!-- ─── Footer ─── -->
     <footer>
         <p>Jamie Wilson · 2026</p>
         <div class="footer-links">
@@ -613,7 +600,6 @@
         </div>
     </footer>
 
-    <!-- ─── Scroll reveal ─── -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
